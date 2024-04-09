@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d440aba-8908-46a3-9783-a98d493887d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/13979ea5-0d21-4329-bc2b-be50b3acdad3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/13979ea5-0d21-4329-bc2b-be50b3acdad3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/connection/EntityManagerProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/connection/EntityManagerProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Country.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/CountryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/CountryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/PresidentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/PresidentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PresidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PresidentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712581439046</updated>
       <workItem from="1712581440045" duration="3123000" />
-      <workItem from="1712645665873" duration="7699000" />
+      <workItem from="1712645665873" duration="10606000" />
     </task>
     <servers />
   </component>

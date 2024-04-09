@@ -5,16 +5,25 @@ import org.example.repository.CountryRepository;
 
 public class CountryService {
     private CountryRepository countryRepository = new CountryRepository();
-    public void add(Country country){
-        countryRepository.add(country);
+    public String add(Country country){
+        if (countryRepository.add(country)){
+            return "Country "+country.getName()+" added! ➕";
+        }
+        return "Country "+country.getName()+" not added.";
     }
-    public void delete(Country country){
-        countryRepository.delete(country);
+    public String delete(Country country){
+        if (countryRepository.delete(country)){
+            return "Country "+country.getName()+" deleted! \uD83D\uDDD1\uFE0F";
+        }
+        return "Country "+country.getName()+" not deleted.";
     }
     public Country find(String name){
         return countryRepository.find(name);
     }
-    public void update(Country country){
-        countryRepository.update(country);
+    public String update(Country country){
+        if (countryRepository.update(country)){
+            return "Country "+country.getName()+" updated! \uD83D\uDD01";
+        }
+        return "Country "+country.getName()+" not updated.";
     }
 }

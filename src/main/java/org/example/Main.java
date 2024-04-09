@@ -10,27 +10,30 @@ public class Main {
     public static void main(String[] args) {
 
         /*PRESIDENT*/
+            System.out.println("\n########## PRESIDENT ##########");
             PresidentService presidentService = new PresidentService();
             President macron = new President("Macron", 40);
             President angela = new President("Merkel", 55);
             President silvio = new President("Berlusconi", 70);
 
             //ADD
-            presidentService.add(macron);
-            presidentService.add(angela);
-            presidentService.add(silvio);
+            System.out.println(presidentService.add(macron));
+            System.out.println(presidentService.add(angela));
+            System.out.println(presidentService.add(silvio));
 
             //FIND
-            System.out.println(presidentService.find("Merkel"));
+            President foundPresident = presidentService.find("Merkel");
+            System.out.println(foundPresident!=null ? "President found: "+foundPresident+" \uD83D\uDD0E" : "President not found");
 
             //DELETE
-            presidentService.delete(silvio);
+            System.out.println(presidentService.delete(silvio));
 
             //UPDATE
             angela.setAge(65);
-            presidentService.update(angela);
+            System.out.println(presidentService.update(angela));
 
         /*COUNTRY*/
+            System.out.println("\n########## COUNTRY ##########");
             CountryService countryService = new CountryService();
             Country belgium = new Country("Belgium", 12000000);
             Country france = new Country("France", 78000000);
@@ -38,22 +41,23 @@ public class Main {
             Country italy = new Country("Italy", 65000000);
 
             //ADD
-            countryService.add(belgium);
-            countryService.add(france);
-            countryService.add(germany);
-            countryService.add(italy);
+            System.out.println(countryService.add(belgium));
+            System.out.println(countryService.add(france));
+            System.out.println(countryService.add(germany));
+            System.out.println(countryService.add(italy));
 
             //FIND
-            System.out.println(countryService.find("belgium"));
+            Country foundCountry = countryService.find("belgium");
+            System.out.println(foundCountry!=null ? "Country found: "+foundCountry+" \uD83D\uDD0E" : "Country not found");
 
             //DELETE
-            countryService.delete(italy);
+            System.out.println(countryService.delete(italy));
 
             //UPDATE
             germany.setPresident(angela);
             france.setPresident(macron);
-            countryService.update(germany);
-            countryService.update(france);
+            System.out.println(countryService.update(germany));
+            System.out.println(countryService.update(france));
 
         /*CLOSE DB CONNECTION*/
         EntityManagerProvider.closeConnection();

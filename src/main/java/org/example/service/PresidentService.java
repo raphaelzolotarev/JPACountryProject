@@ -5,16 +5,25 @@ import org.example.repository.PresidentRepository;
 
 public class PresidentService {
     private PresidentRepository presidentRepository = new PresidentRepository();
-    public void add(President president){
-        presidentRepository.add(president);
+    public String add(President president){
+        if (presidentRepository.add(president)){
+            return "President "+president.getName()+" added! ➕";
+        }
+        return "President "+president.getName()+" not added.";
     }
-    public void delete(President president){
-        presidentRepository.delete(president);
+    public String delete(President president){
+        if (presidentRepository.delete(president)){
+            return "President "+president.getName()+" deleted! \uD83D\uDDD1\uFE0F";
+        }
+        return "President "+president.getName()+" not deleted.";
     }
     public President find(String name){
         return presidentRepository.find(name);
     }
-    public void update(President president){
-        presidentRepository.update(president);
+    public String update(President president){
+        if (presidentRepository.update(president)){
+            return "President "+president.getName()+" updated! \uD83D\uDD01";
+        }
+        return "President "+president.getName()+" not updated.";
     }
 }
