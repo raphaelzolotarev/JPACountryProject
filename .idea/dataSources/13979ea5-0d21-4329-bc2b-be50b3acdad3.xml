@@ -1037,11 +1037,71 @@ thebelgianbrewerydb|schema||chef|localhost|UPDATE|G</Grants>
     </schema>
     <schema id="295" parent="1" name="countrydb">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-04-08.13:56:26</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-04-09.08:01:27</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="296" parent="1" name="chef">
       <Host>localhost</Host>
     </user>
+    <table id="297" parent="295" name="country">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="298" parent="295" name="president">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="299" parent="297" name="country_name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="300" parent="297" name="country_population">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="301" parent="297" name="president_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="302" parent="297" name="FKnbmglhw6nn3pmttshjca4o60t">
+      <ColNames>president_name</ColNames>
+      <RefColNames>name</RefColNames>
+      <RefTableName>president</RefTableName>
+    </foreign-key>
+    <index id="303" parent="297" name="PRIMARY">
+      <ColNames>country_name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="304" parent="297" name="FKnbmglhw6nn3pmttshjca4o60t">
+      <ColNames>president_name</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="306" parent="298" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="307" parent="298" name="age">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="308" parent="298" name="PRIMARY">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="309" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

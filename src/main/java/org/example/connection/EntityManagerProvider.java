@@ -7,19 +7,10 @@ import javax.persistence.Persistence;
 public class EntityManagerProvider {
     private static EntityManagerFactory emf;
     public static EntityManager entityManager;
-    public EntityManagerProvider(){
-        this.emf = Persistence.createEntityManagerFactory("database-configuration");
-        this.entityManager = this.emf.createEntityManager();
+    static {
+        emf = Persistence.createEntityManagerFactory("database-configuration");
+        entityManager = emf.createEntityManager();
     }
-    public EntityManagerProvider(String pu){
-        this.emf = Persistence.createEntityManagerFactory(pu);
-        this.entityManager = this.emf.createEntityManager();
-    }
-
-    public EntityManager getEntityManager() {
-        return entityManager;
-    }
-
     public static void closeConnection(){
         emf.close();
         entityManager.close();

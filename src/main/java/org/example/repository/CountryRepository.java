@@ -5,7 +5,7 @@ import org.example.model.Country;
 import static org.example.connection.EntityManagerProvider.entityManager;
 
 public class CountryRepository {
-    public Country addCountry(Country country){
+    public Country add(Country country){
         entityManager.getTransaction().begin();
         entityManager.persist(country);
         entityManager.getTransaction().commit();

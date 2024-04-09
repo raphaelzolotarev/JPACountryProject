@@ -6,10 +6,10 @@ import javax.persistence.*;
 public class Country {
 
     @Id
-    @Column(name = "country name")
+    @Column(name = "country_name")
     private String name;
-    @Column(name = "country population")
-    private int population;
+    @Column(name = "country_population")
+    private long population;
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
     private President president;
@@ -33,7 +33,7 @@ public class Country {
         this.name = name;
     }
 
-    public int getPopulation() {
+    public long getPopulation() {
         return population;
     }
 
